@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/CSS.css">
+    <script src="./JS/JavaScript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>TODOs List</h1>
+        </div>
+        <div class="title">
+            <p class="innerHeading">Title</p>
+            <input type="text" id="title" placeholder="Add an item to the list"><br>
+        </div>
+        <div class="description">
+            <p class="innerHeading">Description</p>
+            <textarea id="desc" rows="3" placeholder="Add description"></textarea>
+        </div>
+
+        <div class="submitBtn">
+            <button id="add" onclick="getUpdate()">Add to list</button>
+            <button id="clear" onclick="clearData()">Clear list</button>
+        </div>
+
+        <div class="savedItems">
+            <h2 style="font-weight:bold;">Your Items</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">SNo</th>
+                        <th scope="col">Item Title</th>
+                        <th scope="col">Item Description</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
